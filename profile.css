@@ -1,0 +1,271 @@
+html{
+    height:100%
+}
+body{
+    height:100%;
+    display: block;
+}
+section{
+    position: relative;
+    top:90px;
+    max-width: 80%;
+    height:80%;
+    text-align: center;
+    margin:auto;
+    border:1px inset #ccc;
+    justify-content: center;
+    align-content: center;
+    padding-top:120px;
+
+    
+}
+#wellcome-message{
+    margin-bottom:15px;
+}
+#welcome-section{
+    background: #f8f8ff;
+}
+#welcome-section > h1 {
+    margin:auto;
+    text-align:center;
+    width:40vw;
+    height:10vh ;
+    vertical-align: center;
+    margin:ato;
+   
+}
+.section-main{
+    display:flex;
+    flex-direction: row;
+}
+#main-title{
+    font-size: 46px;
+    color: indianred;
+}
+.tittle-style{
+    font-size:40px;
+    color:#35383d;
+}
+@media(max-width:500px){
+    #welcome-section{
+        max-width:100%;
+    }
+    #main-title{
+        font-size: 26px;
+        color: indianred;
+    }
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    border-bottom: 6px solid #541111;
+}
+nav{
+    text-align:right;
+    height:50px;
+    width:100%;
+    background-color: #ffffff;
+    z-index: 2;
+    position:fixed;
+    top:0px;
+}
+nav > ul > a > li{
+    text-decoration: none;
+    display: inline;
+    padding:10px;
+    margin-left:15px;
+    margin-right:15px;
+}
+nav > ul {
+position:fixed;
+right:15px;    
+z-index: 2;
+}
+#projects{
+    position: relative;
+    top:90px;
+    /*max-width: 80%;
+    height:90%;
+    text-align: center;
+    margin:auto;*/
+    background-color: #fffaf0;
+    
+}
+.proj-peofile{
+     border:1px inset #ccc;
+     width:20vw;
+    height:50vh ;
+    margin:5px;
+    border-radius:10px;
+    margin-top:15px;
+}
+.prject-title{
+justify-content: center;
+    height: 8vh;
+    background-color:#541111;
+    border-radius:10px;
+    color:white;
+    margin:auto;
+    
+}
+.proj-peofile:hover{
+    box-shadow: 2px 3px 10px 2px aquamarine antiquewhite;
+}
+footer{
+    position: relative;
+    top:90px;
+    max-width: 100%;
+    height:15px;
+    padding:10px;
+    text-align: center;
+    margin:auto;
+    background-color: #8a3838;
+    color:white;
+    font-size:24x;
+}
+#foot-menu{
+    position: relative;
+    top:90px;
+    max-width: 80%;
+    height:90%;
+    text-align: center;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    background: #fffff0;
+   
+   
+}
+.foot-menu{
+     border:1px inset #ccc;
+     width:20vw;
+    height:50vh ;
+    margin:5px;
+    border-radius:10px;
+}
+.foot-menu-title{
+
+    height: 8vh;
+    background-color:#35383d;
+    color:white;
+
+}
+
+#welcome-code{
+    color:rgb(24, 201, 151);
+    font-size:100%;
+}
+#welcome-first{
+    color: #8a3838;
+    font-size:36px;
+}
+.foot-menu p{
+    text-align: left;
+    padding-left:15px;
+}
+.foot-menu-item{
+    color:rgb(24, 201, 151);
+    font-size:30px;
+    padding-right:5px;
+}
+#contacts{
+    display: flex;
+    flex-direction: column;
+background-color:#fefefa;
+
+}
+.contacts{
+    width:100px;
+    height:100px;
+    padding:auto;
+    justify-content: space-around;
+    border:1px solid black;
+    border-radius:50%;
+    box-shadow: 5px 2px 10% black;
+    margin:auto;
+
+}
+#contacts-icon{
+    display: flex;
+    flex-direction: row;
+}
+#facebook{
+    background-color: #3b5998;
+    text-align: center;
+}
+#twitter{
+    background-color:#1da1f2;
+}
+#google{
+    background-color:#db4437;
+}
+#linkedin{
+    background-color:#0077b5;
+}
+
+/*@media query*/
+
+@media(max-width:500px){
+    #welcome-section{
+        max-width:100%;
+    }
+    #projects{
+        position: relative;
+        top:90px;
+        max-width: 100%;
+        height:auto;
+        text-align: center;
+        margin:auto;
+        display:flex;
+        flex-direction: column; 
+    }
+    .proj-peofile{
+        border:1px inset #ccc;
+        width:100%;
+       height:50vh ;
+       margin-bottom: 10px;
+   }
+   #foot-menu{
+    position: relative;
+    top:90px;
+    max-width: 100%;
+    height:auto;
+    text-align: center;
+    margin:auto;
+    display:flex;
+    flex-direction: column; 
+}
+.foot-menu{
+    border:1px inset #ccc;
+    width:100%;
+   height:50vh ;
+   margin-bottom: 10px;
+}
+.foot-menu > div > ul > li{
+   text-decoration: none;
+   display: block;
+   text-align: start;
+}
+#welcome-code{
+    color:rgb(24, 201, 151);
+    font-size:36px;
+}
+#welcome-first{
+    color: #8a3838;
+    font-size:24px;
+}
+nav > ul {
+    position:fixed;
+    right:20px;
+    margin-top:10px;    
+    z-index: 2;
+    }
+nav > ul > a > li{
+   
+    padding:5px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+}

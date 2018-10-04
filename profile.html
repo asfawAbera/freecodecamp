@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="profile.css">
+    <meta name="viewport" content="width=980, user-scalable=no">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <a href="#welcome-section"><li>Wellcome</li></a>
+            <a href="#projects"><li>Projects</li></a>
+            <a href="#foot-menu"><li>Profile Links</li></a>
+            <a href="#contacts"><li>Contacts</li></a>
+        </ul>
+    </nav>
+    <section id="welcome-section">
+        <div class="section-title" id="wellcome-message"><h1><span id="main-title"> welcome to Asfaw's page!</span></h1></div> <hr>
+        <div id="wellcome-address" >
+            <!--<h3>Address: Pehtoorintie 2A, Helsinki</h3>
+            <h3>E-mail : fityab@hotmail.com</h3>
+            <h3>Phone:+358414930068</h3>-->
+            <h3>{{add}}</h3>
+            <h3>{{mail}}</h3>
+            <h3>{{phone}}</h3>
+            <span id="welcome-first">Full Stack Developer <span id="welcome-code">&lt;code  /&gt;</span>
+        </div>
+       
+        
+        
+    </section>
+    
+    <section id="projects">
+         <div class="section-title">
+           <span class="tittle-style"> # &lt; Projects /&gt;</span>  
+         </div>
+         <div class="section-main"><div class="proj-peofile"><div class="prject-title">Form</div><div><hr></div></div>
+        <div class="proj-peofile"><div class="prject-title">Documentation</div><div><hr></div></div>
+        <div class="proj-peofile"><div class="prject-title">Tribute Page</div><div><hr></div></div>
+        <div class="proj-peofile"><div class="prject-title">Not-Yet-Known</div><div><hr></div></div></div>   
+        
+    
+    </section>
+    
+    <section id="foot-menu">
+        <div class="section-title"><span class="tittle-style"> # &lt; Code /&gt;</span> </div>
+        <div class="section-main"> 
+            <div class="foot-menu"><div class="foot-menu-title">Web- Technologies</div><hr><div>
+                
+                    <p><span class="foot-menu-item">#</span>HTML</p>
+                    <p><span class="foot-menu-item">#</span>XML</p>
+                    <p><span class="foot-menu-item">#</span>CSS</p>
+                    <p><span class="foot-menu-item">#</span>Bootstrap</p>
+                    <p><span class="foot-menu-item">#</span>Asp.net</p>
+                
+            </div></div>
+            <div class="foot-menu"><div class="foot-menu-title">Front-end Technos</div><hr><div>
+              
+                        <p><span class="foot-menu-item">#</span>JavaScript</p>
+                        <p><span class="foot-menu-item">#</span>JSON</p>
+                        <p><span class="foot-menu-item">#</span>React</p>
+                        <p><span class="foot-menu-item">#</span>Vue</p>
+                    
+            
+            </div></div>
+            <div class="foot-menu"><div class="foot-menu-title">Databases</div><hr>
+                <div>
+                
+                        <p><span class="foot-menu-item">#</span>SQL</p>
+                        <p><span class="foot-menu-item">#</span>Mongo db</p>
+                        <p><span class="foot-menu-item">#</span>mySql</p>
+                        <p></p>
+                   
+                </div>
+            </div>
+            <div id="prog" class="foot-menu"><div class="foot-menu-title">Programing languages</div><hr><div>
+                
+                       <!-- <p><span class="foot-menu-item">#</span>c#</p>
+                        <p><span class="foot-menu-item">#</span>PHP</p>
+                        <p><span class="foot-menu-item">#</span>Node Js</p>-->
+                        <p v-for='lan in language'>{{lan}}</p>
+                        <ol>
+                                <!-- Create an instance of the todo-item component -->
+                                <todo-item></todo-item>
+                              </ol>
+            </div></div>
+        </div>
+               
+    </section>
+    <section id="contacts">
+        <div class="section-title">
+                    <span class="tittle-style">  Contacts </span>  
+        </div>
+        <div id="contacts-icon">
+            <div v-for='cont in contacts' v-bind:class={contacts}>{{cont}}</div>
+           <!-- <div id="facebook"  class="contacts">Facebook</div>
+            <div id="twitter"   class="contacts">Twitter</div>
+            <div id="google"    class="contacts">Google+</div>
+            <div id="linkedin"  class="contacts">LinekdIN</div>
+            <div id="linkedin"  class="contacts">Github</div>
+            <div id="linkedin"  class="contacts">code pen</div>-->
+        </div>
+           
+    </section>
+    <footer id="footer">&copy;asfaw abera--2018</footer>
+<script>
+    const vm= new Vue({
+        el:'#wellcome-address',
+        data:{
+            add:'address: pehtoorintie 2 A 1 00410',
+            mail: 'E-mail: workin2sh@yahoo.com',
+            phone: 'Phone: +258414930068',
+            
+        }
+    });
+     new Vue({
+        el:"#contacts-icon",
+        data:{
+            contacts:[
+                'Facebook',
+                'Twitter',
+                'Google',
+                'Linkedin',
+                'Github',
+                'CodePen']
+        }
+    });
+
+    new Vue({
+        el:"#prog",
+        data:{
+                language:[
+                'c#','sql'
+                ]
+        }
+    });
+
+    Vue.component('todo-item', {
+  template: '<li>This is a todo</li>'
+})
+</script>
+</body>
+</html>
